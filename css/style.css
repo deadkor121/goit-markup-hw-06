@@ -30,12 +30,12 @@ height: auto;
 }
 
 .container {
-width: 100%;
-max-width: 1158px;
-padding: 0 15px;
-margin: 0 auto;
+max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -155,14 +155,25 @@ display: flex;
 color: var(--OCEAN, #404BBF);
 }
 
+
+
+
+
+
+
+
+
+
+
 /** ================================= **/
 /** ========== Main banner ========== **/
 
 .banner {
 background: var(--NAVY-BLUE, #2E2F42);
-    max-width: 1440px;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    max-width: 320px;
+    height: 432px;
+    padding-top: 72px;
+    padding-bottom: 200px;
     background-image:
         linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -176,15 +187,16 @@ background: var(--NAVY-BLUE, #2E2F42);
 .header-banner {
     color: var(--WHITE, #FFF);
     text-align: center;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
     max-width: 496px;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .banner-btn {
 font-family: Roboto, sans-serif;
@@ -221,11 +233,15 @@ padding-bottom: 120px;
 
 .strengths-list {
     display: flex;
-    gap: 24px;
+    width: 288px;
+    flex-direction: column;
+    align-items: flex-start;
+   flex-wrap: wrap;
+    gap: 8px;
 }
 
 .strengths-list-item {
-    width: calc((100% - 72px) / 4);
+    width:100%;
 }
 
 .strengths-list-icon {
@@ -243,19 +259,26 @@ margin-bottom: 8px;
 
 .strengths-list-header {
     color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height:40px;
+    letter-spacing:0.72px;
+    align-self: stretch;
+    text-align: center;
     margin-bottom: 8px;
+    text-transform: capitalize;
 }
 
 .strengths-list-text {
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    line-height:24px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing:0.32px;
     text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 72px;
 }
 
 /** ================================= **/
@@ -263,8 +286,10 @@ margin-bottom: 8px;
 
 .team {
 background: var(--CLOUD, #F4F4FD);
-padding-top: 120px;
+padding-top: 96px;
 padding-bottom: 120px;
+padding-left: 12px;
+padding-right: 12px;
 }
 
 .team-header {
@@ -280,14 +305,19 @@ padding-bottom: 120px;
 
 .team-list {
     display: flex;
-    gap: 24px;
+   width: 264px;
+padding-bottom: 0px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 72px;
 }
 
 .team-list-item {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .team-list-container {
@@ -369,9 +399,12 @@ padding-bottom: 120px;
 }
 
 .portfolio-list {
-    display: flex;
-    gap: 48px 24px;
-    flex-wrap: wrap;
+ display: flex;
+width: 288px;
+padding-bottom: 0px;
+flex-direction: column;
+align-items:center;
+gap: 32px;
 }
 
 .portfolio-list-item {
@@ -835,3 +868,21 @@ fill: #FFFFFF;
     background-color: #404BBF;
 }
 
+/*-------@media-------*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .banner{
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
