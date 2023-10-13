@@ -255,6 +255,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-bottom: 8px;
+display: none;
 }
 
 .strengths-list-header {
@@ -383,7 +384,7 @@ padding: 32px 0;
 
 .portfolio {
 background: #FFFFFF;
-padding-top: 120px;
+padding-top: 96px;
 padding-bottom: 120px;
 }
 
@@ -395,7 +396,7 @@ padding-bottom: 120px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    margin-bottom: 72px;
+    margin-bottom:23px, 23px, 72px;
 }
 
 .portfolio-list {
@@ -403,7 +404,7 @@ padding-bottom: 120px;
 width: 288px;
 padding-bottom: 0px;
 flex-direction: column;
-align-items:center;
+align-items:flex-start;
 gap: 32px;
 }
 
@@ -873,10 +874,18 @@ fill: #FFFFFF;
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding:0 16px;
   }
-  .banner{
-    max-width: 768px;
+  .strengths-list-item{
+    width: calc(100% - 24px)/2;
   }
+  .strengths-list-header{
+    text-align: left;
+  }
+  .strengths-list-icon{
+    display: block;
+  }
+
 }
 
 @media screen and (min-width: 1158px) {
